@@ -8,8 +8,6 @@
     <meta name="author" content="Cameron Smith">
     <title>BoastHosting Web Services - Home</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-    
   </head>
   <body>
 
@@ -20,51 +18,70 @@
         </div>
         <nav>
           <ul>
-            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="current"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section id="showcase">
-      <div class="container">
-        <h1>Affordable Professional Web Design</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida ligula id luctus. Duis purus tortor, porttitor non mauris in, volutpat sagittis magna.</p>
-      </div>
-    </section>
-
     <section id="domain">
       <div class="container">
-        <h1>Search for a domain:</h1>
-        <form action="" method="post">
+        <h2>Search for a domain:</h2>
+        <form>
           <input type="text" placeholder="Enter a domain name...">
-          <button type="submit" class="button_1">Search</button>
+          <button type="submit" class="button_1">Search</button> <!-- Need WHMCS to do this over POST. -->
         </form>
       </div>
     </section>
 
-    <section id="boxes">
-      <div class="container">
-        <div class="box">
-          <img src="./img/logo_html.png">
-          <h3>HTML5 Markup</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida ligula id luctus. Duis purus tortor, porttitor non mauris in, volutpat sagittis magna.</p>
-        </div>
-        <div class="box">
-          <img src="./img/logo_css.png">
-          <h3>CSS3 Styling</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida ligula id luctus. Duis purus tortor, porttitor non mauris in, volutpat sagittis magna.</p>
-        </div>
-        <div class="box">
-          <img src="./img/logo_brush.png">
-          <h3>Graphic Design</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat gravida ligula id luctus. Duis purus tortor, porttitor non mauris in, volutpat sagittis magna.</p>
-        </div>
-      </div>
-    </section>
+   <section id="contactform">
+     <h2>Contact Us</h2>
+     <p>Thank you for your interest in BoastHosting! If you're interested in purchasing website design or development work, make sure you've ordered from our <a href="#">online store</a> (coming soon) first.
+     </p>
+     <p><span class="note">NOTE:</span> While the order form is down, please feel free to place an order using this contact form and we will manually invoice you while we work on our custom ordering system. Don't worry about entering an order number. We greatly appreciate your patience!</p>
+     <form action="http://csmith.butlerccwebdev.net/cgi-sys/formmail.pl" method="post" class="contact">
+       <div>
+         <label for="firstName">First name:</label><br>
+         <input type="text" placeholder="First name" name="firstName" id="firstName" required>
+       </div>
+       <div>
+         <label for="lastName">Last name:</label><br>
+         <input type="text" placeholder="Last name" name="lastName" id="lastName" required>
+       </div>
+       <div>
+         <label for="email">Email address:</label><br>
+         <input type="email" placeholder="Email address" name="email" id="email" required>
+       </div>
+       <div>
+         <label for="orderNumber">Order number:</label><br>
+         <input type="text" placeholder="Order number (e.g. #001)" id="orderNumber" name="orderNumber">
+       </div>
+       <div>
+         <label for="contracted">Did you purchase design/development work?</label><br>
+         <input type="radio" name="contracted" value="Yes" id="contracted" checked required>Yes<br>
+         <input type="radio" name="contracted" value="No" required>No<br>
+       </div>
+       <div>
+         <label>Message:</label><br>
+         <textarea placeholder="Details explaining how you'd like the website to look..." name="message" id="message" required></textarea>
+       </div>
+       <div>
+         <label>Site references:</label><br>
+         <textarea placeholder="List of website references..." name="references" id="references"></textarea>
+       </div>
+       <div>
+         <input type="submit">
+         <input type="reset">
+       </div>
+       <!-- HIDDEN FIELDS -->
+       <input type="hidden" name="recipient" value="admin@csmith.butlerccwebdev.net">
+       <input type="hidden" name="subject" value="FormMail Contact Information">
+       <input type="hidden" name="redirect" value="http://csmith.butlerccwebdev.net/boasthosting/thankyou.html">
+     </form>
+   </section>
 
     <footer>
       <p>Copyright &copy; 2017. All Rights Reserved. Site design by <a href="http://csmith.butlerccwebdev.net">Cameron Smith</a>.</p>

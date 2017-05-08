@@ -5,6 +5,15 @@ body {
   background-color: #f4f4f4;
 }
 
+a {
+  color: #E505F7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F2CCF5;
+}
+
 /* Global */
 .container {
   width: 80%;
@@ -19,17 +28,21 @@ ul {
 
 .button_1 {
   height: 38px;
-  background: #CCFFCC;
+  background: #E505F7;
   border: none;
   padding-left: 20px;
   padding-right: 20px;
-  color: #003399;
+  color: #fff;
   cursor: pointer;
   text-transform: uppercase;
 }
 
 .button_1:hover {
-  background-color: #e1ffe1;
+  background-color: #F2CCF5;
+}
+
+.light {
+  color: #fff;
 }
 
 .dark {
@@ -40,9 +53,13 @@ ul {
   margin-bottom: 10px;
 }
 
+.note {
+  color: #FF0000;
+}
+
 /* Header */
 header {
-  background: #003399;
+  background: #66CCFF;
   color: #ffffff;
   padding-top: 30px;
   min-height: 70px;
@@ -67,7 +84,7 @@ header #branding {
   float: left;
 }
 
-header #branding h1 {
+header #branding h2 {
   margin: 0;
 }
 
@@ -77,12 +94,11 @@ header nav {
 }
 
 header .highlight, header .current a {
-  color: #66CCFF;
-
+  color: #003399;
 }
 
 header a:hover {
-  color: #66CCFF;
+  color: #003399;
 
 }
 
@@ -96,35 +112,36 @@ header .current a:hover {
   background: url('../img/showcase.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
-  color: #003399;
+  color: #fff;
 }
 
-#showcase h1 {
-  margin-top: 200px;
+#showcase h2 {
+  margin-top: 150px;
   font-size: 55px;
   margin-bottom: -33px;
 }
 
 #showcase p {
   font-size: 20px;
-  width: 30%;
+  width: 40%;
   color: #000;
-  margin-left: 50px;
+  margin-left: 35px;
 }
 
 /* Domain Search */
 #domain {
   padding: 15px;
-  color: #000000;
-  background: #66CCFF;
+  color: #fff;
+  background: #003399;
 }
 
-#domain h1 {
+#domain h2 {
   float: left;
 }
 
 #domain form {
   float: right;
+
   margin-top: 15px;
 }
 
@@ -144,17 +161,98 @@ header .current a:hover {
   text-align: center;
   width: 30%;
   padding: 10px;
+  margin-left: 20px;
+  background: #E9F2F3;
+  border: 1px solid #05DEF7;
+  border-radius: 1em;
+  height: 300px;
+}
+
+#boxes .box a {
+  color: #E505F7;
+  text-decoration: none;
+}
+
+#boxes .box a:hover {
+  color: #F2CCF5;
+}
+
+#boxes .box p, #boxes .box ol li {
+  text-align: left;
 }
 
 #boxes .box img {
   width: 90px;
 }
 
+/* Thank you page */
+#thankyou {
+  float: left;
+  color: #000;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 29%;
+}
+
+/* Contact Form */
+
+.contact {
+  margin: 20px;
+}
+
+#contactform {
+  margin: 20px;
+}
+
+.contact input[type=text], .contact input[type=email] {
+  padding: 12px 20px;
+  margin: 15px 0;
+  background-color: #f7f7fa;
+  color: #223958;
+  border: 2px solid #ccc;
+}
+
+.contact input[type=radio] {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+textarea {
+  width: 50%;
+  height: 100px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.contact input[type=submit], .contact input[type=reset] {
+  background-color: #E505F7;
+  color: #fff;
+  width: 10%;
+  border: 1px solid #F2CCF5;
+  height: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact input[type=submit]:hover, .contact input[type=reset]:hover {
+  background-color: #F2CCF5;
+  color: #000;
+}
+
+/* End Contact Form */
+
 /* Sidebar */
 aside#sidebar {
   float: right;
   width: 30%;
   margin-top: 10px;
+}
+
+aside#sidebar ul li {
+  margin-left: 40px;
 }
 
 aside#sidebar .quote input, aside#sidebar .quote textarea {
@@ -172,22 +270,27 @@ article#main-col {
 ul#services li {
   list-style: none;
   padding: 20px;
-  border: #cccccc solid 1px;
-  margin-bottom: 5px;
-  background: #e6e6e6;
+  border: #05DEF7 solid 1px;
+  margin-bottom: 10px;
+  background: #E9F2F3;
 }
 
 footer {
   padding: 20px;
   margin-top: 20px;
   color: #ffffff;
-  background-color: #003399;
+  background-color: #66CCFF;
   text-align: center;
+  clear: both;
 }
 
 footer a {
   text-decoration: none;
-  color: #CCFFCC;
+  color: #E505F7;
+}
+
+footer a:hover {
+  color: #F2CCF5;
 }
 
 /* Media Queries */
@@ -195,7 +298,7 @@ footer a {
   header #branding,
   header nav,
   header nav li,
-  #domain h1,
+  #domain h2,
   #domain form,
   #boxes .box,
   article#main-col,
@@ -205,8 +308,13 @@ footer a {
     width: 100%;
   }
 
-  header {
-    padding-bottom: 20px;
+  header nav ul {
+    width: 100%;
+  }
+
+  header a {
+    display: block;
+    width: 100%;
   }
 
   #showcase {
@@ -220,7 +328,7 @@ footer a {
     color: #ffffff;
   }
 
-  #showcase h1 {
+  #showcase h2 {
     margin-top: 40px;
     color: #003399;
   }
@@ -234,4 +342,34 @@ footer a {
     width: 100%;
     margin-bottom: 5px;
   }
+
+  #boxes .box {
+    float: left;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+  .contact input[type=submit], .contact input[type=reset] {
+    background-color: #E505F7;
+    color: #fff;
+    width: 100%;
+    border: 1px solid #F2CCF5;
+    height: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
 }
